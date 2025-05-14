@@ -8,10 +8,12 @@ function combineUsers(...usernames) {
     combinedObject.users.push(...nestedArray[i])
   }
   
-  console.log(combinedObject)
+  combinedObject['merge_date'] = Date.today().toString("M/d/yyyy")
+  
+  return combinedObject
 }
 
-combineUsers(["Jim3","Pam5","Dwight77"],["Michael6","Eleanor22","Chidi202"],["Jack_jack","Julia_Oreo", "Bill_bore"])
+console.log(combineUsers(["Jim3","Pam5","Dwight77"],["Michael6","Eleanor22","Chidi202"],["Jack_jack","Julia_Oreo", "Bill_bore"]))
 
 module.exports = {
   ...(typeof combineUsers !== 'undefined' && { combineUsers })
