@@ -1,3 +1,5 @@
+require('datejs');
+
 function combineUsers(...usernames) {
   let nestedArray = usernames
   const combinedObject = {users: []}
